@@ -141,23 +141,15 @@ public class Salesforce extends ScriptBase{
             JSONObject arrayElement = records.getJSONObject(0);
             contactId = arrayElement.getString("Id");
 
-            String cid = jsonObject.getJSONArray("records").getJSONObject(0).getString("Id");
+            contactId  = jsonObject.getJSONArray("records").getJSONObject(0).getString("Id");
 
-            System.out.println("contactId" + cid);
+            System.out.println("contactId" + contactId);
 
         }
         catch (Exception e)
         {
             System.out.println(e.getMessage());
         }
-
-
-//        Map<String, String> headers = new HashMap<>();
-//        headers.put("Content-Type", "application/json");
-//
-//        request = playwright.request().newContext(new APIRequest.NewContextOptions()
-//                .setBaseURL(BASE_URL)
-//                .setExtraHTTPHeaders(headers));
 
         System.out.println("Status Code : "  + response.statusText() + " " + response.status());
 
