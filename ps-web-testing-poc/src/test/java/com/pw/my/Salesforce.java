@@ -108,6 +108,7 @@ public class Salesforce extends ScriptBase{
                     accessToken = jsonObject.getString("access_token");
 
 
+
                     //access_token = objJSL.access_token;
                 } catch (Exception e) {
                     throw new RuntimeException(e);
@@ -139,16 +140,13 @@ public class Salesforce extends ScriptBase{
 
         String contactId = "";
         try {
+            JSONArray records = jsonObject.getJSONArray("records");
+            JSONObject arrayElement = records.getJSONObject(0);
+            contactId = arrayElement.getString("Id");
 
-            JsonSlurper slurper = new groovy.json.JsonSlurper();
+            String cid = jsonObject.getJSONArray("records").getJSONObject(0).getString("Id");
 
-            //Object pslurper = slurper.parseText(body);
-
-
-
-
-
-            //contactId = jsonObject.getString(5);
+            System.out.println("contactId" + cid);
 
         }
         catch (Exception e)
