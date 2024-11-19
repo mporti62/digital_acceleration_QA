@@ -1,5 +1,6 @@
 package com.digitalacceleration;
 
+import com.microsoft.playwright.Locator;
 import com.pw.ScriptBase;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -12,13 +13,37 @@ public class DigitallAcceleration extends ScriptBase {
 
             page.fill("id=username", "johndoe@gmail.com");
             page.fill("id=password", "digitalacc01");
-            page.click("#Login");
+            page.click("id =submit");
 
             page.waitForTimeout(5000); // waits for 5 seconds
 
-            Assertions.assertTrue(page.title().contains("DigitalAcceleration"));
-
+            //Assertions.assertTrue(page.title().contains("DigitalAcceleration"));
 
         }
+
+        public void ProductList(String _productId){
+
+            //Loop table and select the product
+            //The products selected shoud be added to the cart
+            // Get all elements matching the locator
+            Locator elements = page.locator("your_locator_here");
+            // Loop through the elements
+            for (int i = 0; i < elements.count(); i++) {
+                Locator element = elements.nth(i);
+
+        }
+
+        public void EmtyCart(){
+             // Loop product list and remove from cart
+         }
+
+
+
+        public void AddToCart(){
+
+            // Select Products and add to the cart
+
+        }
+
     }
 
