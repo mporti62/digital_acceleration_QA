@@ -30,11 +30,25 @@ public class DigitallAcceleration extends ScriptBase {
             // Loop through the elements
             for (int i = 0; i < elements.count(); i++) {
                 Locator element = elements.nth(i);
+                if(elements.nth(i).textContent().equals(_productId)) {
+                    //click add button
+                }
+            }
+
+
+
+
 
         }
 
         public void EmtyCart(){
              // Loop product list and remove from cart
+            Locator elements = page.locator("your_locator_here");
+            // Loop through the elements
+            for (int i = 0; i < elements.count(); i++) {
+                Locator element = elements.nth(i);
+                // click remove product button
+            }
          }
 
 
@@ -42,6 +56,7 @@ public class DigitallAcceleration extends ScriptBase {
         public void AddToCart(){
 
             // Select Products and add to the cart
+            ProductList("productId");
 
         }
 
