@@ -15,6 +15,7 @@ public class ScriptBase {
 
     private static final String webDir = "file:///" + System.getProperty("user.dir") + "\\src\\web\\";
     public static final String home = webDir + "home.html";
+    public static final String login = webDir + "login.html";
     public static String advantages = webDir + "advantages.html";
 
     protected static Playwright playwright;

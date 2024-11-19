@@ -6,13 +6,10 @@ import com.microsoft.playwright.options.AriaRole;
 import com.microsoft.playwright.options.FormData;
 import com.microsoft.playwright.options.RequestOptions;
 import com.pw.ScriptBase;
-import groovy.json.JsonSlurper;
 import org.json.JSONArray;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.json.JSONObject;
-
-import java.util.*;
 
 
 public class Salesforce extends ScriptBase{
