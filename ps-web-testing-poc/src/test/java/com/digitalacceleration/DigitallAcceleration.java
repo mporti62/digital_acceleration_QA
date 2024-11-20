@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 
 public class DigitallAcceleration extends ScriptBase {
         @Test
-        public void Login() {
+         public void Login() {
 
             page.navigate(login);
 
@@ -34,11 +34,6 @@ public class DigitallAcceleration extends ScriptBase {
                     //click add button
                 }
             }
-
-
-
-
-
         }
 
         public void EmtyCart(){
@@ -57,7 +52,6 @@ public class DigitallAcceleration extends ScriptBase {
 
             // Select Products and add to the cart
             ProductList("productId");
-
         }
 
     }
