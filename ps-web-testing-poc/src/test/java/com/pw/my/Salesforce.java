@@ -157,6 +157,25 @@ public class Salesforce extends ScriptBase{
 
 
 
+    @Test
+    public void getInventories(){
+
+        String url = System.getenv("inventory-ms-url") + "/inventories";
+        APIRequest request = playwright.request();
+        // Set headers for the request
+        APIResponse response = request.newContext().get(url, RequestOptions.create());
+
+        String body = response.text();
+        System.out.println(body);
+
+        JSONObject jsonObject = new JSONObject(body);
+
+
+
+    }
+
+
+
 }
 
 
